@@ -17,9 +17,7 @@ body {
   width: 400px;
 }
 .form-box > .brand {
-  display: flex;
-  align-center: center;
-  justify-content: center;
+  text-align: center;
 }
 .form-box > .brand > img {
   border-radius: 40px;
