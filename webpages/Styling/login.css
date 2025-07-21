@@ -53,7 +53,7 @@ body {
 .form-box > form > .btn{
     margin: 8px 0px;
 }
-.form-box > form > .btn > input{
+.form-box > form > .btn > button{
     background-color: #687FE5;
     color: white;
     padding: 12px 20px;
