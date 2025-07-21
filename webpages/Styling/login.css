@@ -1,0 +1,62 @@
+body {
+  background-color: #e5e5f7;
+  opacity: 0.8;
+  background-image: radial-gradient(#555556 0.5px, #e5e5f7 0.5px);
+  background-size: 10px 10px;
+}
+.main-wrapper {
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-box {
+  background-color: white;
+  padding: 16px;
+  border-radius: 8px;
+  width: 400px;
+}
+.form-box > .brand {
+  display: flex;
+  align-center: center;
+  justify-content: center;
+}
+.form-box > .brand > img {
+  border-radius: 40px;
+}
+.form-box > form {
+  margin-top: 16px;
+}
+.form-box > form > .user-name > input {
+  margin: 8px 0px;
+  height: 20px;
+  width: 95%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+.form-box > form > .user-password > input {
+  margin: 8px 0px;
+  height: 20px;
+  width: 95%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+.form-box > form > .user-name > input:focus {
+  outline: 2px solid #999;
+
+}
+.form-box > form > .user-password > input:focus {
+  outline: 2px solid #999;
+}
+.form-box > form > .btn{
+    margin: 8px 0px;
+}
+.form-box > form > .btn > input{
+    background-color: #687FE5;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: none;
+}
