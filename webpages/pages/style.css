@@ -1,0 +1,47 @@
+/* navbar */
+@import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Hand+Pre:wght@400..700&family=Edu+VIC+WA+NT+Hand+Pre:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Savate:ital,wght@0,200..900;1,200..900&display=swap");
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #f6f6f6;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+.navbar-wrapper {
+  background-color: #fff;
+  padding: 8px 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.brand > img {
+  border-radius: 50px;
+  box-shadow: 5px 5px 2px #ccc;
+}
+.links > ul {
+  list-style: none;
+}
+.links > ul > li {
+  display: inline;
+}
+.links > ul > li > a {
+  text-decoration: none;
+  color: #000;
+  margin-left: 8px;
+}
+.links > ul > li > a:hover {
+  color: red;
+}
+.cta > a {
+  text-decoration: none;
+  background-color: #553996;
+  color: #fff;
+  padding: 6px 8px;
+  border-radius: 5px;
+  transition: ease .5s;
+}
+.cta > a:hover {
+  box-shadow: 5px 5px 2px #ccc;
+}
