@@ -3,15 +3,13 @@ h1 {
 }
 
 /* media query css */
-@media (max-width: 540px) {
+@media (width <= 540px) {
   h1 {
     color: red;
-    background-color: yellow;
   }
 }
-@media (max-width: 768px) {
+@media (width <= 768px) and (width > 540px) {
   h1 {
     color: green;
-    background-color: red;
   }
 }
