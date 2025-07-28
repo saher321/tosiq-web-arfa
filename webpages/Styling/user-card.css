@@ -1,59 +1,62 @@
 body {
-    margin: 0px; padding: 0px;
+  margin: 0px;
+  padding: 0px;
   background-image: url("../media/assets/images/bg.jpg");
   background-size: cover;
 }
-.container{
-    display: grid;
-    place-items: center;
-    height: 100vh;
+.container {
+  display: grid;
+  place-items: center;
+  height: 100vh;
 }
-.profile-card{
-    background-color: rgba(256, 256, 256, 0.2);
-    padding: 16px;
-    border-radius: 8px;
-    backdrop-filter: blur(5px);
-    width: 300px
+.profile-card {
+  background-color: rgba(256, 256, 256, 0.2);
+  padding: 16px;
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
+  width: 300px;
 }
-.img-card{
-display: grid;
-place-items: center;
+.img-card {
+  display: grid;
+  place-items: center;
 }
-.img-card > img{
-    border-radius: 50%;
+.img-card > img {
+  border-radius: 50%;
 }
-.card-title{
-    font-size: 28px;
-    text-align: center;
+.card-title {
+  font-size: 28px;
+  text-align: center;
 }
-.cta{
-    text-align: center;
+.cta {
+  text-align: center;
 }
-.cta > button{
-    border: 1px solid gainsboro;
-    padding: 6px 16px;
-    height: 56px;
-    width: 140px;
-    font-size: 20px;
+.cta > button {
+  border: 1px solid gainsboro;
+  padding: 6px 16px;
+  height: 56px;
+  width: 140px;
+  font-size: 20px;
 }
-.cta > .message{
-    background-color:  #fff;
+.cta > .message {
+  background-color: #fff;
 }
-.cta > .following{
-    background-color:  transparent;
+.cta > .following {
+  background-color: transparent;
 }
-.social-icons{
-    margin-top: 20px;
-    text-align: center;
-    font-size: 24px;
+.social-icons {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 24px;
 }
-.social-icons > .fb{
-    color: #3D5F9A;
+.social-icons > .fb {
+  color: #3d5f9a;
 }
-.social-icons > .tw{
-    color: #5AA8ED;
-}.social-icons > .pint{
-    color: #BA0A17;
-}.social-icons > .google{
-    color: #DC4B42;
+.social-icons > .tw {
+  color: #5aa8ed;
+}
+.social-icons > .pint {
+  color: #ba0a17;
+}
+.social-icons > .google {
+  color: #dc4b42;
 }
