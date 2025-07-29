@@ -1,0 +1,7 @@
+p{
+    background-color: #ccc;
+    color: #333;
+    height: 300px;
+    width: 200px;
+    overflow: auto;
+}

@@ -1,0 +1,34 @@
+:root{
+    --txt-clr: red;
+    --bg-clr: #ccc;
+    --clr1: black;
+    --br-radius: 5px;
+}
+div{
+    height: 36px;
+    margin-top: 6px;
+    border-radius: var(--br-radius);
+}
+body{
+
+    background-color: var(--bg-clr);
+}
+h2{
+    color: var(--txt-clr);
+}
+.box1{
+    color: var(--txt-clr);
+    background-color: var(--clr1);
+}
+.box2{
+    background-color: var(--clr1);
+}
+.box3{
+    background-color: var(--clr1);
+}
+.box4{
+    background-color: var(--clr1);
+}
+.box5{
+    background-color: var(--clr1);
+}
