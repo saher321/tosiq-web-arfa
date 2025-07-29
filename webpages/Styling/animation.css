@@ -1,6 +1,7 @@
 .box {
-  height: 200px;
-  width: 200px;
+  height: 80px;
+  width: 80px;
+  background-color: red;
   /* animation-name: box;
     animation-duration: 3s;
     animation-iteration-count: infinite; */
@@ -20,7 +21,7 @@
         height: 16px;
         width: 16px;
     } */
-  0% {
+  /* 0% {
     background-image: url("../media/assets/images/bg.jpg");
     background-size: cover;
   }
@@ -33,5 +34,29 @@
   100% {
     background-image: url("../media/assets/images/user.jpeg");
     background-size: cover;
-  }
+  } */
+   0% {
+    margin-left: 0px;
+    margin-top: 0px;
+   }
+   20%{
+    margin-top: 0px;
+    margin-left: 100px;
+   }
+   40%{
+    margin-left: 100px;
+    margin-top: 100px;
+   }
+   60%{
+    margin-left: 100px;
+    margin-top: 0px;
+   }
+   80%{
+    margin-left: 100px;
+    margin-top: 0px;
+   }
+   100%{
+    margin-left: 0px;
+    margin-top: 0px;
+   }
 }
