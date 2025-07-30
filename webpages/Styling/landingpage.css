@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Hand+Pre:wght@400..700&family=Edu+VIC+WA+NT+Hand+Pre:wght@400..700&family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&family=Noto+Sans+JP:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Savate:ital,wght@0,200..900;1,200..900&family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap");
+
+html{
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #f5f5f5;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.navbar-wrapper {
+  width: fit-content;
+  background-color: white;
+  box-shadow: 3px 3px 5px #dbdbdb;
+  padding: 8px 16px;
+  margin: 16px auto;
+  border-radius: 20px;
+  position: fixed;
+}
+nav {
+  margin: 0px 20px;
+}
+nav ul {
+  all: unset;
+}
+nav ul li {
+  display: inline-block;
+  padding: 8px;
+  margin: 0px 16px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #222831;
+  font-size: 20px;
+}
+.extra{
+    margin-top: 50px;
+}
+.box1 {
+  background-color: #261fb3;
+}
+.box2 {
+  background-color: #034c53;
+}
+.box3 {
+  background-color: #3d0301;
+}
+.box4 {
+  background-color: #D98324;
+}
+:where(.box1, .box2, .box3, .box4) {
+  height: 600px;
+  width: auto;
+  box-shadow: 3px 3px 5px #dbdbdb;
+  margin: 16px;
+  border-radius: 20px;
+  padding: 8px;
+  color: #fff;
+}
