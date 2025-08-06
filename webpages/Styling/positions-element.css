@@ -1,0 +1,16 @@
+.parent{
+    border: 2px dashed #000;
+    height: 200px;
+    
+    position: relative;
+}
+.child{
+    background-color: red;
+    height: 50px;
+    width: 50px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+}
