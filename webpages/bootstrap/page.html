@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="bs537/css/bootstrap.min.css" />
+
+    <style>
+        .success-badge{
+            color: #2FA179;
+            background-color: #E8F9F1;
+        }
+        .warning-badge{
+            color: #f1b84e;
+            background-color: #f6f0cd;
+        }
+        .danger-badge{
+            color: #B21F25;
+            background-color: #FAE8E7;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="my-3 d-flex justify-content-between">
+        <h2>Person data</h2>
+        <button
+          type="button"
+          class="btn btn-success"
+          data-bs-toggle="modal"
+          data-bs-target="#staticBackdrop"
+        >
+          Add Data
+        </button>
+
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="staticBackdrop"
+          data-bs-backdrop="static"
+          data-bs-keyboard="false"
+          tabindex="-1"
+          aria-labelledby="staticBackdropLabel"
+          aria-hidden="true"
+        >
+        <form>
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                  Add Person Data
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+
+                <input type="text" class="form-control" placeholder="Enter first name">
+
+                <input type="text" class="my-3 form-control" placeholder="Enter last name">
+
+                <input type="email" class="form-control" placeholder="Enter email">
+
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button type="submit" class="btn btn-success">
+                  Save data
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+        </div>
+      </div>
+      <!-- table -->
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Email</th>
+            <th> Status </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>mark@gmail.com</td>
+            <td>
+                <span class="badge success-badge">Active</span>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>jacob@gmail.com</td>
+            <td>
+                <span class="badge danger-badge">Inactive</span>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>John</td>
+            <td>Doe</td>
+            <td>john@gmail.com</td>
+            <td>
+                <span class="badge warning-badge">Proccessing</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- table end -->
+    </div>
+
+    <!-- JS -->
+    <script src="bs537/js/bootstrap.min.js"></script>
+
+  </body>
+</html>
