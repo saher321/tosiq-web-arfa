@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="bs537/css/bootstrap.min.css" />
+    <style>
+        body{
+            background-image: url("bg.jpg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+        form{
+            background-color: rgba(255, 255, 255, 0.504);
+            backdrop-filter: blur(5px);
+            width: 500px;
+        }
+        label:not(.terms){
+            margin-top: 8px;
+        }
+        .form-control, .form-control:focus{
+            background-color: #ffffff90;
+        }
+    </style>
+</head>
+<body>
+    <form class="p-4 rounded-1 shadow-sm row">
+        <h3 class="text-center">Signup here</h3>
+        <div class="col-lg-6">
+            <label for=""> First Name</label>
+            <input type="text" class="form-control" placeholder="First Name">
+        </div>
+        <div class="col-lg-6">
+            <label for="">Last Name</label>
+            <input type="text" class="form-control" placeholder="Last name">
+        </div>
+        <div class="col-lg-12">
+            <label for="">Email</label>
+            <input type="text" class="form-control" placeholder="Email">
+        </div>
+        <div class="col-lg-12">
+            <label for="">Password</label>
+            <input type="Password" class="form-control" placeholder="Password">
+        </div>
+        <div class="col-lg-12 my-4">
+            <input type="checkbox" id="terms" class="form-check-input" placeholder="Password">
+            <label for="terms" class="terms">I agreed to terms & conditions</label>
+        </div>
+        <div class="col-lg-12 ">
+            <button class="w-50 btn btn-primary">Submit</button>
+        </div>
+    </form>
+
+</body>
+</html>
