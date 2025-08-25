@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta type="image/png" href="favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="bs537/css/bootstrap.min.css" />
@@ -11,11 +12,16 @@
         height: 350px;
         object-fit: cover;
       }
+      .my-div {
+        display: flex;
+        gap: 4px;
+      }
+      .my-div > .second {
+      }
       @media (width <= 524px) {
-        .card1{
-            display: none;
+        .card1 {
+          display: none;
         }
-        
       }
     </style>
   </head>
@@ -211,6 +217,14 @@
       </section>
       <!-- princing end -->
     </div>
+    <hr />
+    <section>
+      <div class="my-div">
+        <div class="first">First div</div>
+        <div class="second">Second div</div>
+      </div>
+    </section>
+    <hr />
 
     <!-- js -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
