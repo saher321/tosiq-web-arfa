@@ -21,15 +21,14 @@ function getResult(){
 
     if (units <= 200) {
         output.innerText = units * unitPrice + tax + fuelTax;
-    } else if (units > 200 && units <= 250) {
+    } else if (units > 200 && units <= 250) { // range defined
         unitPrice = 22;
         output.innerText = units * unitPrice + tax + fuelTax;
-    } else if (units > 250 && units <= 300) {
+    } else if (units > 250 && units <= 300) { // range defined
         unitPrice = 44;
         output.innerText = units * unitPrice + tax + fuelTax;
     } else {
         unitPrice = 49;
         output.innerText = units * unitPrice + tax + fuelTax;        
     }
-
 }
