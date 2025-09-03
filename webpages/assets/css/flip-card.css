@@ -1,0 +1,27 @@
+.flip-card {
+  height: 300px;
+  width: 200px;
+  background-color: red;
+  transition: .5s;
+}
+.flip-card-inner {
+    transform-style: preserve-3d;
+    position: relative;
+}
+.front-side,
+.back-side {
+  width: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+.front-side {
+  background-color: yellow;
+}
+.back-side {
+  transform: rotateY(180deg);
+  background-color: cyan;
+}
+
+.flip-card:hover .flip-card-inner{
+    transform: rotateY(180deg);
+}

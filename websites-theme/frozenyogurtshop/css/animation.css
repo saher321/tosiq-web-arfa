@@ -1,0 +1,12 @@
+.elevate {
+  animation: Elevate;
+  animation-timeline: view(30% 0%);
+}
+@keyframes Elevate {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
