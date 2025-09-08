@@ -9,6 +9,7 @@ const cities = [
     {id: 3, country_id: 1, name: "Peshawar"},
     {id: 4, country_id: 3, name: "LA"}
 ];
+
 var i;
 var countryList = document.getElementById("country");
 for(i = 0; i < countries.length; i++){
@@ -21,11 +22,12 @@ function getCountry(){
     var city = document.getElementById("city");   
     // console.log("Country id: " + country);
     city.innerHTML = "";
+    var i;
     for(i = 0; i < cities.length; i++){
-    
+        
         if (country_id == cities[i].country_id) {
-        city.innerHTML += "<option value="+cities[i].id+">"
-        + cities[i].name + "</option>"
+            city.innerHTML += "<option value="+cities[i].id+">"
+            + cities[i].name + "</option>"
         }
-}
+    }
 }
