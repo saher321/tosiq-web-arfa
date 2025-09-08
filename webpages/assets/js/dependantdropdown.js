@@ -6,7 +6,8 @@ const countries = [
 const cities = [
     {id: 1, country_id: 2, name: "Riyad"},
     {id: 2, country_id: 1, name: "Lahore"},
-    {id: 3, country_id: 1, name: "Peshawar"}
+    {id: 3, country_id: 1, name: "Peshawar"},
+    {id: 4, country_id: 3, name: "LA"}
 ];
 var i;
 var countryList = document.getElementById("country");
@@ -18,7 +19,8 @@ for(i = 0; i < countries.length; i++){
 function getCountry(){
     var country_id = document.getElementById("country").value;   
     var city = document.getElementById("city");   
-    // console.log("Country id: " + country); 
+    // console.log("Country id: " + country);
+    city.innerHTML = "";
     for(i = 0; i < cities.length; i++){
     
         if (country_id == cities[i].country_id) {
