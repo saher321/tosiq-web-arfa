@@ -1,0 +1,37 @@
+body{
+    margin: 0px; padding: 0px;
+}
+header{
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    padding: 20px 25px;
+}
+header nav a{
+    text-decoration: none;
+    color: #f1f1f1;
+    margin-right: 28px;
+}
+header nav a:hover{
+    color: #74c961ff;
+}
+header nav a.active{
+    color: #74c961ff;
+}
+/* main */
+main section {
+    height: 100vh;
+}
+section:nth-child(1){
+    background-color: cyan
+}
+section:nth-child(2){
+    background-color: plum
+}
+section:nth-child(3){
+    background-color: tomato
+}
+section:nth-child(4){
+    background-color: purple;
+    color: white;
+}
