@@ -7,6 +7,12 @@ let result;
 let txt = "This is my last class";
 // result = txt.split(" ");
 // 
+let arr = ["Asad", "Umar", "John Samith", "Sam"];
+// result = arr.splice((arr.length-1), 1, "Lahore", "Karachi");
+let arr2 = ["Lahore", "Karachi"];
+result = [...arr, ...arr2];
+console.log(result)
+// console.log(result, arr)
 const users = [
     {id: 1, name: "Adil", role: "admin"},
     {id: 2, name: "Ahsan", role: "user"},
@@ -16,7 +22,7 @@ const users = [
     {id: 6, name: "John Snow", role: "vendor"},
 ];
 
-result = users.filter(check); // returns a matching data
+// result = users.filter(check); // returns a matching data
 // result = users.find(check); // returns a top value 
 
 function check(users){
@@ -24,4 +30,4 @@ function check(users){
         return users;
     }
 }
-console.log(result)
+// console.log(result)
