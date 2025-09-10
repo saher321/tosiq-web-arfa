@@ -28,8 +28,9 @@ result = array1.map((element) => element*2 )
 // let check = (users) => {
 console.log(array1, result);
 
+let userRole = "vendor";
 function check(users){
-    if (users.role == "vendor") {
+    if (users.role == userRole) {
         return users;
     }
 }
