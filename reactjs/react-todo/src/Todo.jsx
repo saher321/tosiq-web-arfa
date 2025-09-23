@@ -10,8 +10,12 @@ const Todo = () => {
     setInputValue("");
   }
 
-  const removeItem = (i) => {
-    console.log(i);
+  const removeItem = (key) => {
+    // console.log(key);
+    const oldArray = [...listItems];
+    oldArray.splice(key, 1);
+
+    setListItems(oldArray);
   }
   
 
@@ -34,12 +38,13 @@ const Todo = () => {
           <ul>
             {listItems.map((item, i) => { 
               return ( 
-              <li key={item}>
-                {item} 
+              <li key={item} className='p-2 rounded bg-amber-200 my-2 flex items-center justify-between'>
+
+                <span className='block'>{item}</span> 
 
                 <button 
-                onClick={removeItem(i)}
-                className='bg-gray-200 p-1 rounded-full'>          {<FiTrash2 />} 
+                onClick={() => removeItem(i)}
+                className='block bg-gray-200 p-1 rounded-full'>          {<FiTrash2 />} 
                 </button>
               </li>
               ) 
