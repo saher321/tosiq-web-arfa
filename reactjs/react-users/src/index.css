@@ -1,0 +1,16 @@
+@import "tailwindcss";
+body{
+  background-color: #333;
+}
+.profile-img{
+  border-radius: 50px;
+  height: 80px;
+  width: 80px;
+}
+.card > button{
+  border: 1px solid #ccc;
+  padding: 4px;
+  margin-top: 12px;
+  margin-left: 8px;
+
+}
