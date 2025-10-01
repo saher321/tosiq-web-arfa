@@ -1,0 +1,32 @@
+Mern Stack with next js
+M = MongoDb
+E = ExpressJs
+R = ReactJs
+N = NodeJs
+--------------
+Pre-req. (Html, css, bootstrap, js)
+
+NODEJS SOFTWARE
+UI LIBRARIES (Components creation)
+POSTMAN (URLS TEST)
+MongoDB Compass
+
+ReactJs
+	Basics (programming)
+	Hooks
+	Components
+	Pages
+	Props
+	Routing (Navigations)
+	ContextAPI (State management)
+
+NodeJs + ExpressJs + MongoDB
+MongoDb 
+API (URL)
+CRUD (CREATE - READ - UPDATE - DELETE)
+Login / Signup (JWT)
+
+Final Project 
+(CMS: Website(Reactjs), Dashboard(ReactJs))
+	
+	
