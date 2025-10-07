@@ -28,7 +28,13 @@ const Users = () => {
   return (
     <div className="m-4">
       <h1 className="text-3xl">Users</h1>
-      <div className="flex justify-end">
+      <div className="flex items-center justify-between">
+        <div>
+          <input 
+          className="bg-white/70 focus:outline-none py-1 px-3 rounded shadow"
+          type="text"placeholder="Search here"/>
+
+        </div>
         <div>
             <button 
             className="cursor-pointer shadow bg-white p-2 rounded-lg text-purple-500"
