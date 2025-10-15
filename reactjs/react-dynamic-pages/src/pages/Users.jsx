@@ -60,7 +60,7 @@ const Users = () => {
               <div className="mt-3 grid grid-cols-12 gap-3">
                 {userList.map((user, i) => {
                   return (
-                    <div key={i} className={`${isGrid ? "lg:col-span-4 md:col-span-6 sm:col-span-6" : "col-span-12" }`}>
+                    <div key={i} className={`${isGrid ? "max-sm:col-span-6 lg:col-span-4 md:col-span-6 sm:col-span-6" : "col-span-12" }`}>
                       <NavLink to={`/users/${user.id}`}>
                         <UserCard user={user} />
                       </NavLink>
