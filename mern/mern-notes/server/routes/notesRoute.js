@@ -1,8 +1,10 @@
 import express from 'express';
-import { getAllNotes } from '../controllers/notesController.js';
+import { createNotes, getAllNotes } from '../controllers/notesController.js';
 
 const notesRoute = express.Router();
 
-notesRoute.get('/notes', getAllNotes)
+notesRoute.get('/notes', getAllNotes);
+notesRoute.post('/notes/create', createNotes);
+
 
 export default notesRoute;
