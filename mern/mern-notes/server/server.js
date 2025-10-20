@@ -1,20 +1,21 @@
-//express, dotenv, mongoose, cors
+//express, dotenv, mongoose, nodemon, cors
 import express from 'express';
 import dotenv from 'dotenv';
 import { connectDB } from './config/db.js';
-import Note from './models/notesModel.js';
+import notesRoute from './routes/notesRoute.js';
 
 dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
+
+const PREFIX = '/api/v1/';
+
+app.use(PREFIX, notesRoute);
+
 app.get('/', (req, res) => {
     res.send("Hello World 1");
 });
 
-app.get('/notes', async (req, res) => {
-    const notes = await Note.find({});
-    return res.send({status: true, notes})
-})
 
 
 app.listen(PORT, () => {
