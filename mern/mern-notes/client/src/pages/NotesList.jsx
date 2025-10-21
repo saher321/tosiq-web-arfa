@@ -42,7 +42,7 @@ const NotesList = () => {
           notes.map((note, i) => {
             return (
               <div key={i} className='col-span-4'>
-                <NoteItem note={note} />
+                <NoteItem note={note} setNotes={setNotes} />
               </div>
             )
           }) :

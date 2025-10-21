@@ -21,3 +21,17 @@ export const createNotes = async (req, res) => {
         console.log(`Error: \n ${error}`)
     }
 }
+
+export const deleteNote = async (req, res) => {
+    const {id} = req.params;
+    try {
+        const ok = await Note.findByIdAndDelete({_id: id});
+        if (ok) {
+            return res.send({status: true, message: "Data deleted"})
+        } else {
+            return res.send({status: true, message: "Data isn't delete"})
+        }
+    } catch (error) {
+        console.log(`Error: \n ${error}`)
+    }
+}
