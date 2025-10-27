@@ -2,6 +2,8 @@ import axios from "axios";
 import moment from "moment/moment";
 import toast from "react-hot-toast";
 import { NavLink } from "react-router";
+import { FaRegTrashAlt } from "react-icons/fa";
+import { FaRegEdit } from "react-icons/fa";
 
 const NoteItem = ({ note, setNotes }) => {
 
@@ -28,12 +30,20 @@ const NoteItem = ({ note, setNotes }) => {
             <div className="text-gray-700 italic">
             {note.updatedAt ? moment(note.updatedAt).format('MMMM Do YYYY, h:mm:ss a') : "-time-missing"}</div>
 
-            <div>
+            <div className="bg-gray-200 px-3 py-1 rounded-full flex items-center gap-2">
+                <div>
+                  <NavLink
+                  className='text-blue-500'
+                  to={`/notes/detail/${note._id}`}>
+                    <FaRegEdit />
+                  </NavLink>
+                </div>
                 <button
                 className='text-red-500'
                 onClick={(e) => handleDelete(e, note._id)}>
-                    Delete
+                    <FaRegTrashAlt />
                 </button>
+
             </div>
         </div>
       </div>

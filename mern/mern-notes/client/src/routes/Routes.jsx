@@ -7,7 +7,7 @@ import DetailNote from '../pages/DetailNote'
 const router = createBrowserRouter([
     { path: '/', element: <NotesList /> },
     { path: '/notes/create', element: <CreateNote /> },
-    { path: '/notes/detail', element: <DetailNote /> },
+    { path: '/notes/detail/:id', element: <DetailNote /> },
     { path: '*', element: <NotesList /> },
 ])
 

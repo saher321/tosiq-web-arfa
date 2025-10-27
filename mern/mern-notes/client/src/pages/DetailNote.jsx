@@ -1,30 +1,40 @@
+import React, { useEffect, useState } from 'react'
 import axios from 'axios';
-import React, { useState } from 'react'
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
-import { NavLink, useNavigate } from 'react-router'
-import { CREATE_NOTE } from '../resources/api';
+import { NavLink, useNavigate, useParams } from 'react-router'
+import { DETAIL_NOTE, UPDATE_NOTE } from '../resources/api';
+
 const DetailNote = () => {
   const [isLoading, setIsLoading] = useState(false)
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, reset } = useForm();
+  const params = useParams();
   const navigate = useNavigate();
 
-  const handleSaveNote = async (data) => {
-    if (!data.title) {
-      toast.error("Title field is required");
-      return;
-    } else if (!data.description) {
-      toast.error("Description field is required");
-      return;
-    } 
+  useEffect(() => {
+    const getSingleNote = async () => {
+      try {
+        const result = await axios.get(`${DETAIL_NOTE}/${params.id}`)
+
+        if (result.data && result.data.note) {
+          reset(result.data.note)
+        }
+      } catch (error) {
+        toast.error("Something went wrong!")
+      }
+    }
+    getSingleNote();
+  }, [params.id])
+
+  const handleUpdateNote = async (data) => {
     setIsLoading(true)
     try {
-      const success = await axios.post(CREATE_NOTE, data);
+      const success = await axios.patch(`${UPDATE_NOTE}/${params.id}`, data);
       if (success) {
-        toast.success("Note create successfully", { duration: 4000 });
+        toast.success("Note update successfully", { duration: 4000 });
         navigate('/')
       } else {
-        toast.error("Failed to create note");
+        toast.error("Failed to update note");
       }
     } catch (error) {
       toast.error("Somthing went wrong!");
@@ -36,7 +46,7 @@ const DetailNote = () => {
     <>
     <div className='p-5'>
       <div className='flex items-center justify-between'>
-        <div>Detail Note</div>
+        <div>Detail Note ({params.id})</div>
         <div>
           <NavLink 
           className="bg-amber-400 px-4 py-2 rounded cursor-pointer"
@@ -45,7 +55,7 @@ const DetailNote = () => {
       </div>
 
       <div className='mt-5 p-3 rounded max-w-xl bg-amber-400'>
-        <form onSubmit={handleSubmit(handleSaveNote)}>
+        <form onSubmit={handleSubmit(handleUpdateNote)}>
           <div>
             <label className='block'>Title</label>
             <input {...register("title")} type='text' className='rounded w-full p-3 bg-white' placeholder='Enter your title'/>
