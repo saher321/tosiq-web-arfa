@@ -41,7 +41,7 @@ export const detailNote = async (req, res) => {
     const note = await Note.findById({_id : id});
     
     if (!note) {
-        return res.send({status: false, message: "Note not found or maybe delete"})
+        return res.send({status: false, message: "Note not found or maybe deleted"})
     }
 
     return res.send({status: true, note})
