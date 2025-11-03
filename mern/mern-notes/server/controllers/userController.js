@@ -8,7 +8,7 @@ export const register = async (req, res) => {
     try {
         let user = await User.findOne({email})
         if (user) {
-            return res.send({status: false, message: "User email already exist, try new one"})
+            return res.send({statusCode: 100, status: false, message: "User email already exist, try new one"})
         }
 
         // hash password
@@ -24,7 +24,7 @@ export const register = async (req, res) => {
         if (user) {
             return res.send({status: true, message: "User Registered successfully", user})
         } else {
-            return res.send({status: true, message: "Registration failed"})
+            return res.send({status: false, message: "Registration failed"})
         }
     } catch (error) {
         console.log(`Error: ${error}`)
@@ -38,7 +38,7 @@ export const login = async (req, res) => {
     try {
         let user = await User.findOne({email})
         if (!user) {
-            return res.send({status: false, message: "User not found with this email"})
+            return res.send({status: false, statusCode: 404, message: "User not found with this email"})
         }
 
         // match password
