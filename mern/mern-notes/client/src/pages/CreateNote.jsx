@@ -19,8 +19,8 @@ const CreateNote = () => {
     } 
     setIsLoading(true)
     try {
-      const success = await axios.post(CREATE_NOTE, data);
-      if (success) {
+      const result = await axios.post(CREATE_NOTE, data);
+      if (result) {
         toast.success("Note create successfully", { duration: 4000 });
         navigate('/')
       } else {

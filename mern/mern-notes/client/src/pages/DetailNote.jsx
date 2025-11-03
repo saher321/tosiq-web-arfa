@@ -15,7 +15,6 @@ const DetailNote = () => {
     const getSingleNote = async () => {
       try {
         const result = await axios.get(`${DETAIL_NOTE}/${params.id}`)
-
         if (result.data && result.data.note) {
           reset(result.data.note)
         }
