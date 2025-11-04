@@ -19,7 +19,11 @@ const CreateNote = () => {
     } 
     setIsLoading(true)
     try {
-      const result = await axios.post(CREATE_NOTE, data);
+      const result = await axios.post(CREATE_NOTE, data, {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem('userToken')}`
+          }
+        });
       if (result) {
         toast.success("Note create successfully", { duration: 4000 });
         navigate('/')

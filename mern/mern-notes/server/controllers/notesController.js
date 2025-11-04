@@ -1,9 +1,8 @@
 import Note from "../models/notesModel.js";
 
 export const getAllNotes = async (req, res) => {
-    const authUser = req.user;
     const notes = await Note.find({});
-    return res.send({status: true, user: authUser, notes})
+    return res.send({status: true, notes})
 }
 
 export const createNotes = async (req, res) => {

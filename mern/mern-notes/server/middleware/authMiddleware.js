@@ -2,8 +2,9 @@ import jwt from 'jsonwebtoken'
 
 export const authMiddleware = async (req, res, next) => {
     const userToken = req.headers.authorization;
+    console.log(userToken)
     if (!userToken) {
-        return res.send({status: false, statusCode: 401, message: "Unauthorized! Please login first"})
+        return res.send({status: false, statusCode: 401, message: "Unauthorized!"})
     }
     
     try {

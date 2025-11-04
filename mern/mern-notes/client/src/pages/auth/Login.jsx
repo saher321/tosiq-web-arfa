@@ -26,6 +26,7 @@ const Login = () => {
             toast.error(result.data.message, { duration: 4000 });
             return;
         } else if (result.data.status == true) {
+            result.data.userToken && localStorage.setItem("userToken", result.data.userToken)
             toast.success(result.data.message, { duration: 4000 });
             navigate('/')
         } else {

@@ -14,7 +14,11 @@ const DetailNote = () => {
   useEffect(() => {
     const getSingleNote = async () => {
       try {
-        const result = await axios.get(`${DETAIL_NOTE}/${params.id}`)
+        const result = await axios.get(`${DETAIL_NOTE}/${params.id}`, {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem('userToken')}`
+          }
+        })
         if (result.data && result.data.note) {
           reset(result.data.note)
         }

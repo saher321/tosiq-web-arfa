@@ -13,7 +13,12 @@ const NotesList = () => {
     const getNotes = async () => {
       setIsLoading(true);
       try {
-        const result = await axios.get(NOTES_API);
+        const result = await axios.get(NOTES_API, {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem('userToken')}`
+          }
+        });
+        console.log(result.data)
         setNotes(result.data.notes);
       } catch (error) {
         toast.error("Failed to fetch notes");
@@ -43,7 +48,7 @@ const NotesList = () => {
             <>Loading...</>
           ) : notes.length > 0 ? (
             <div className="grid grid-cols-12 gap-3">
-              {notes.map((note, i) => {
+              {notes?.map((note, i) => {
                 return (
                   <div key={i} className="max-sm:col-span-12 lg:col-span-3 md:col-span-6 sm:col-span-6">
                     <NavLink to={'/notes/detail'}>

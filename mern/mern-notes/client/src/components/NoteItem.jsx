@@ -4,6 +4,7 @@ import toast from "react-hot-toast";
 import { NavLink } from "react-router";
 import { FaRegTrashAlt } from "react-icons/fa";
 import { FaRegEdit } from "react-icons/fa";
+import { DELETE_NOTE } from "../resources/api";
 
 const NoteItem = ({ note, setNotes }) => {
 
@@ -13,7 +14,15 @@ const NoteItem = ({ note, setNotes }) => {
         if (!window.confirm("Are your sure you want to delete this?")) return;
 
         try {
-            await axios.delete(`http://localhost:5000/api/v1/notes/delete/${id}`);
+            const response = await axios.delete(`${DELETE_NOTE}/${id}`, {
+              headers: {
+                Authorization: `Bearer ${localStorage.getItem('userToken')}`
+              }
+            });
+            if (response.data && response.data.statusCode == 401) {
+              toast.error(response.data.message);
+              return;
+            }
             setNotes((prev) => prev.filter(note => note._id !== id))
             toast.success("Notes deleted successfully");
         } catch (error) {

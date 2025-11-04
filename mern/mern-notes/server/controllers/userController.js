@@ -55,7 +55,7 @@ export const login = async (req, res) => {
         }, process.env.JWT_SECRET, { expiresIn: "1h"});
 
         if (userToken) {
-            return res.cookie("userToken", userToken).send({status: true, message: "User Loggedin successfully", userToken})
+            return res.send({status: true, message: "User Loggedin successfully", userToken})
         } else {
             return res.send({status: true, message: "Failed to create session"})
         }
