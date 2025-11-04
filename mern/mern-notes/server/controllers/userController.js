@@ -1,6 +1,7 @@
 import bcrypt from "bcryptjs";
 import jwt from 'jsonwebtoken';
 import User from "../models/userModel.js";
+import { sendEmail } from "../utils/sendEmail.js";
 
 export const register = async (req, res) => {
     const { name, email, password } = req.body;
@@ -48,13 +49,20 @@ export const login = async (req, res) => {
         if (!isMatched) {
             return res.send({status: false, message: "Password didn't matched"})
         }
+
+        const content = `
+        <h1>Your are loggedin in our system</h1>
+        <br />
+        <br />
+        <small>Regards: Notify</small>
+        `
         
         var userToken = jwt.sign({
             userID: user?._id, 
             userEmail: user?.email
         }, process.env.JWT_SECRET, { expiresIn: "1h"});
-
         if (userToken) {
+            sendEmail("pnymeet@gmail.com", "Loggin successfully", content)
             return res.send({status: true, message: "User Loggedin successfully", userToken})
         } else {
             return res.send({status: true, message: "Failed to create session"})
