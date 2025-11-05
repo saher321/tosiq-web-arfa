@@ -1,6 +1,6 @@
 import nodemailer from 'nodemailer'
 
-export const sendEmail = async (to, subject, content) => {
+export const sendEmail = async (userEmail, subject, content) => {
     // Create a test account or replace with real credentials.
     try {
             const transporter = nodemailer.createTransport({
@@ -14,14 +14,14 @@ export const sendEmail = async (to, subject, content) => {
             });
 
             const info = await transporter.sendMail({
-                from: `"Notify" <${EMAIL_USER}>`,
-                to: to,
+                from: `"Notify"`,
+                to: userEmail,
                 subject: subject,
                 html: content, // HTML body
             });
 
             console.log("Message sent:", info.messageId);
     } catch (error) {
-        console.log("User email is not valid in Gmail server")
+        console.log("User email is not valid in Gmail server: ", error)
     }
 }
