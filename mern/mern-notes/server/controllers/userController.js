@@ -96,7 +96,6 @@ export const sendOTP = async (req, res) => {
   const {email} = req.body;
   try {
     const user = await User.findOne({ email });
-    console.log(user)
     if (!user) {
       return res.send({
         status: false,
@@ -145,4 +144,37 @@ export const verifyOTP = async (req, res) => {
         console.log("Error: ", error)
     }
 };
-export const resetPassword = async () => {};
+export const resetPassword = async (req, res) => {
+  const { email, newPassword } = req.body;
+
+  try {
+    let user = await User.findOne({ email });
+    if (!user) {
+      return res.send({
+        status: false,
+        statusCode: 404,
+        message: "User not found with this email",
+      });
+    }
+
+    // hash newPassword
+    const randomStr = await bcrypt.genSalt(10);
+    const myHashPassword = await bcrypt.hash(newPassword, randomStr);
+    
+    user.password = myHashPassword
+    await user.save();
+
+    const content = `
+    <h1>Your has been reset</h1>
+    <br />
+    <br />
+    <small>Regards: Notify</small>
+    `;
+    
+    sendEmail(email, "Password reset successful", content);
+    return res.send({ status: true, message: "Password has been reset" });
+  } catch (error) {
+    console.log(`Error: ${error}`);
+  }
+
+};

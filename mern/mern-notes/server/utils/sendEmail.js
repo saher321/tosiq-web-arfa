@@ -14,7 +14,7 @@ export const sendEmail = async (userEmail, subject, content) => {
             });
 
             const info = await transporter.sendMail({
-                from: `"Notify"`,
+                from: `"Notify" <${process.env.EMAIL_USER}>`,
                 to: userEmail,
                 subject: subject,
                 html: content, // HTML body
