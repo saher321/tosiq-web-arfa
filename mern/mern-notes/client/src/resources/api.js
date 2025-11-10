@@ -1,6 +1,8 @@
 export const LOGIN_URL = "http://localhost:5000/api/v1/user/login"
 export const SIGNUP_URL = "http://localhost:5000/api/v1/user/register"
-export const VERIFY = "http://localhost:5000/api/v1/user/verify"
+// export const VERIFY = "http://localhost:5000/api/v1/user/verify"
+export const SEND_OTP_URL = "http://localhost:5000/api/v1/user/send-otp"
+export const VERIFY_OTP_URL = "http://localhost:5000/api/v1/user/verify-otp"
 
 export const NOTES_API = "http://localhost:5000/api/v1/notes"
 export const CREATE_NOTE = "http://localhost:5000/api/v1/notes/create"

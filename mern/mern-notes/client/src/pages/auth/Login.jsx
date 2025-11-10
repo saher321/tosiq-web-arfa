@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form';
-import { useNavigate } from 'react-router';
+import { NavLink, useNavigate } from 'react-router';
 import { LOGIN_URL } from '../../resources/api';
 import toast from 'react-hot-toast';
 
@@ -68,6 +68,10 @@ const Login = () => {
           </div>
 
         </form>
+        <div className='mt-3'>
+          <hr />
+          <NavLink to={'/forgot-password'}>Forgot password? click here</NavLink>
+        </div>
       </div>
     </div>
     </>
