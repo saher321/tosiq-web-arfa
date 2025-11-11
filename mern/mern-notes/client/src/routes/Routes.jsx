@@ -7,6 +7,7 @@ import Login from '../pages/auth/Login'
 import Signup from '../pages/auth/Signup'
 import ForgotPassword from '../pages/auth/ForgotPassword'
 import VerifyOTP from '../pages/auth/VerifyOTP'
+import ResetPassword from '../pages/auth/ResetPassword'
 
 
 const Routes = () => {
@@ -16,7 +17,7 @@ const Routes = () => {
     { path: '/login', element: <Login /> },
     { path: '/forgot-password', element: <ForgotPassword /> },
     { path: '/verify-otp', element: <VerifyOTP /> },
-
+    { path: '/reset-password', element: <ResetPassword />},
 
     { path: '/', element:  <NotesList />},
     { path: '/notes/create', element: <CreateNote /> },

@@ -26,7 +26,7 @@ const VerifyOTP = () => {
 
       if (response.data.status == true) {
         toast.success(response.data.message)
-        // navigate('/verify-otp')
+        navigate('/reset-password')
         return;
       } else {
         toast.error(response.data.message)
