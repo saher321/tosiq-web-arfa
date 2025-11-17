@@ -78,7 +78,7 @@ export const login = async (req, res) => {
       { expiresIn: "1h" }
     );
     if (userToken) {
-      sendEmail("pnymeet@gmail.com", "Loggin successfully", content);
+      sendEmail(user.email, "Loggin successfully", content);
       return res.send({
         status: true,
         message: "User Loggedin successfully",
