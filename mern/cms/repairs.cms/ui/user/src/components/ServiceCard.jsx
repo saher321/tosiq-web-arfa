@@ -1,10 +1,10 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-
+import image from '../assets/images/slide1.jpg'
 function ServiceCard() {
   return (
     <Card style={{ width: '100%' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
+      <Card.Img variant="top" src={image} />
       <Card.Body>
         <Card.Title>Card Title</Card.Title>
         <Card.Text>
