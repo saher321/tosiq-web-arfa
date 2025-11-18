@@ -1,7 +1,7 @@
 import React, { Children } from 'react'
 
-export const SectionHeading = ({ children }) => {
+export const SectionHeading = ({ className, children }) => {
   return (
-    <h2 style={{color: "red"}}>{children}</h2>
+    <h3 className={className}>{children}</h3>
   )
 }
