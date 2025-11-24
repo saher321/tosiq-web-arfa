@@ -16,17 +16,18 @@
   font-size: 28px;
   padding: 8px;
   display: inline;
-  margin-top: -6px; 
+  margin-top: -6px;
   background: white;
   border-radius: 50px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 .slick-list {
-  margin: 0 -10px; /* prevents slider overflow */
+  margin: 0 -5px;
 }
 .slick-slide > div {
-  margin: 0 10px;
+  padding: 0 5px;
 }
+
 .arrow.next {
   right: 20px;
 }
@@ -34,7 +35,6 @@
 .arrow.prev {
   left: 20px;
 }
-
 
 /* react slick slider end */
 .navlink {
@@ -66,6 +66,47 @@
   background-color: green;
 }
 
+/* about us */
+.about-us-banner {
+  background-color: #ccc;
+  padding: 56px 0px;
+}
+.about-our-motive {
+
+}
+.aboutus-image-left {
+  height: 300px;
+  width: auto;
+  object-fit: cover;
+  aspect-ratio: 16/9;
+  border-radius: 8px;
+}
+
+/* contact form */
+.contactus-booking-form {
+  margin: 20px 0px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px #ccc;
+
+}
+
+.contactus-info {
+  background: linear-gradient(#BBDCE5, white);
+  width: fit-content;
+  margin: 20px 0px;
+  padding: 20px;
+  border-radius: 8px;
+}
+.contactus-info small{
+  display: block;
+}
+.contactus-info label{
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* footer */
 footer {
   background-color: #333;
   padding: 80px 0px 56px 0px;
@@ -83,11 +124,11 @@ ul {
 }
 
 .copyright {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
 }
 .social-icons {
-    display: flex;
-    gap: 16px;
+  display: flex;
+  gap: 16px;
 }
