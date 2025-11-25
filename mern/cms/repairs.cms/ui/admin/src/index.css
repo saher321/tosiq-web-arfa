@@ -1,0 +1,23 @@
+.sidebar-links {
+    background-color: #f1f1f1;
+    border-radius: 4px;
+    padding: 8px;
+}
+.sidebar-links a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    background-color: #ddd;
+    margin: 4px 0px;
+    border-radius: 4px;
+    padding: 8px;
+}
+.sidebar-links a:hover {
+    color: #f1f1f1;
+    background-color: #333;
+}
+.admin-layout-content {
+    background-color: #f1f1f1;
+    padding: 8px 0px 8px 8px;
+    border-radius: 4px;
+}
