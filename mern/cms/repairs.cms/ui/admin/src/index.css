@@ -18,6 +18,10 @@
 }
 .admin-layout-content {
     background-color: #f1f1f1;
-    padding: 8px 0px 8px 8px;
+    padding: 8px;
     border-radius: 4px;
+}
+.page-title {
+    font-size: 20px;
+    font-weight: bold;
 }

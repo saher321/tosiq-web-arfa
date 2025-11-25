@@ -17,7 +17,7 @@ const AdminLayout = ({ children }) => {
               <Sidebar />
             </Col>
           }
-          <Col className=''>
+          <Col>
             <div className='admin-layout-content'>{children}</div>
           </Col>
         </Row>
