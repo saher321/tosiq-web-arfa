@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import AdminLayout from "../layout/AdminLayout";
-import { Form, Button, Table } from "react-bootstrap";
+import { Form, Button, Table, Badge } from "react-bootstrap";
 import WebpageModel from "../components/WebpageModel";
+import { FaEdit } from "react-icons/fa";
+import { FaTrash } from "react-icons/fa6";
 
 const Webpages = () => {
   const [modalShow, setModalShow] = useState(false);
@@ -37,21 +39,16 @@ const Webpages = () => {
           <tbody>
             <tr>
               <td>1</td>
-              <td>Table cell</td>
-              <td>Table cell</td>
-              <td>Table cell</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Table cell </td>
-              <td>Table cell </td>
-              <td>Table cell </td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>Table cell </td>
-              <td>Table cell </td>
-              <td>Table cell </td>
+              <td>Terms & conditions</td>
+              <td>
+                <Badge bg="success">Live</Badge>
+              </td>
+              <td>
+                <div className="d-flex gap-2">
+                  <div  onClick={() => setModalShow(true)}><FaEdit /></div> |
+                  <div><FaTrash /> </div>
+                </div>
+              </td>
             </tr>
           </tbody>
         </Table>
