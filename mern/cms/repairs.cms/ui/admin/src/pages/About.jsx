@@ -1,28 +1,15 @@
 import React, { useState } from "react";
 import AdminLayout from "../layout/AdminLayout";
 import { Badge, Button, Col, Form, Row, Table } from "react-bootstrap";
-import Editor, {
-  BtnBold,
-  BtnItalic,
-  createButton,
-  EditorProvider,
-  Toolbar,
-} from "react-simple-wysiwyg";
 import { FaTrash } from "react-icons/fa6";
 import { FaEdit } from "react-icons/fa";
 import FAQModel from "../components/FAQModel";
-
-const BtnAlignLeft = createButton("Align left", "<≡", "justifyLeft");
-const BtnAlignCenter = createButton("Align center", "≡", "justifyCenter");
-const BtnAlignRight = createButton("Align right", "≡>", "justifyRight");
+import TextEdit from "../components/TextEdit";
 
 const About = () => {
   const [value, setValue] = useState("");
   const [modalShow, setModalShow] = useState(false);
 
-  function onChange(e) {
-    setValue(e.target.value);
-  }
   return (
     <AdminLayout>
       <div className="page-title">About us</div>
@@ -54,15 +41,7 @@ const About = () => {
                 Right content
               </Form.Label>
               <Col sm="10">
-                <Editor value={value} onChange={onChange}>
-                  <Toolbar>
-                    <BtnBold />
-                    <BtnItalic />
-                    <BtnAlignLeft />
-                    <BtnAlignCenter />
-                    <BtnAlignRight />
-                  </Toolbar>
-                </Editor>
+                <TextEdit value={value} setValue={setValue}/>
               </Col>
             </Form.Group>
 

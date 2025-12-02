@@ -16,6 +16,10 @@
     color: #f1f1f1;
     background-color: #333;
 }
+.sidebar-links .active-link {
+    color: #f1f1f1;
+    background-color: #333;
+}
 .admin-layout-content {
     background-color: #f1f1f1;
     padding: 8px;
@@ -25,6 +29,24 @@
     font-size: 20px;
     font-weight: bold;
 }
+/* dashboard page css */
+
+.dashboard-card {
+    background-color: white;
+    padding: 8px;
+    border-radius: 5px;
+}
+.dashboard-card > .card-title {
+    color: #999;
+    font-size: 11px;
+    font-weight: bold;
+}
+.dashboard-card > .card-body {
+    color: #333;
+    font-size: 28px;
+    font-weight: bold;
+}
+
 
 /* setting page css */
 

@@ -18,6 +18,11 @@ function MyNavbar() {
             <NavLink className="navlink" to="/about-us">About us</NavLink>
             <NavLink className="navlink" to="/contact-us">Contact us</NavLink>
           </Nav>
+          <div className="justify-content-end">
+            <Navbar.Text>
+              <a className="btn text-bg-success" href="#login">Action button</a>
+            </Navbar.Text>
+          </div>
         </Navbar.Collapse>
       </Container>
     </Navbar>
